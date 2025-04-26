@@ -74,3 +74,42 @@ footer {
 .btn:hover {
   background: #555;
 }
+
+.profile-container {
+  position: relative;
+  text-align: center;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  animation: popIn 0.8s ease-out forwards;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
